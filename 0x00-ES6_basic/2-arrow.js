@@ -1,4 +1,4 @@
-export default function () => {
+export default () => {
   this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
   const self = this;
