@@ -10,7 +10,8 @@ export default class Building {
   }
 
   set sqft(sqftNum) {
-    this._sqft = Number(sqftNum);
+    if (!isNaN(sqftNum))
+	  this._sqft = sqftNum;
   }
 
   evaluationWarningMessage() {
