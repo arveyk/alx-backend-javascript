@@ -10,10 +10,8 @@ export default async function asyncUploadUser() {
     };
     return failRes;
   }
-  else {
-    return {
-      photo: res1,
-      user: res2,
-    };
-  }
+  return {
+    photo: res1,
+    user: res2,
+  };
 }
