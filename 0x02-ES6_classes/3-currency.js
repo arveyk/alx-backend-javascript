@@ -9,7 +9,9 @@ export default class Currency {
   }
 
   set code(codejs) {
-    this._code = codejs;
+    if (typeof(codejs) === String) {
+      this._code = codejs;
+    }
   }
 
   get name() {
@@ -17,7 +19,9 @@ export default class Currency {
   }
 
   set name(namejs) {
-    this._name = namejs;
+    if (typeof(namejs) === String) {
+      this._name = namejs;
+    }
   }
 
   displayFullCurrency() {
