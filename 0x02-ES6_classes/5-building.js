@@ -11,11 +11,8 @@ export default class Building {
   }
 
   set sqft(sqftNum) {
-    if (!isNaN(sqftNum)) {
-      this._sqft = sqftNum;
-    }
+    this._sqft = sqftNum;
   }
-
   evaluationWarningMessage() {
   }
 }
