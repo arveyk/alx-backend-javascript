@@ -12,7 +12,7 @@ export default class SkyHighBuilding extends Building {
 
   set floor(floorMeasure) {
     if (!isNaN(floorMeasure))
-	  this._floor = floorMeasure;
+      this._floor = floorMeasure;
   }
 
   valuationWarningMessage() {
