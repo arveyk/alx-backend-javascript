@@ -1,8 +1,9 @@
 export default class Building {
   constructor(sqft) {
     this._sqft = sqft;
-    if (!this.evaluationWarningMessage)
-	  throw new Error("Class extending Building must override evaluationWarningMessage");
+    if (!this.evaluationWarningMessage) {
+      throw new Error("Class extending Building must override evaluationWarningMessage");
+    }
   }
 
   get sqft() {
@@ -10,8 +11,9 @@ export default class Building {
   }
 
   set sqft(sqftNum) {
-    if (!isNaN(sqftNum))
-	  this._sqft = sqftNum;
+    if (!isNaN(sqftNum)) {
+      this._sqft = sqftNum;
+    }
   }
 
   evaluationWarningMessage() {
