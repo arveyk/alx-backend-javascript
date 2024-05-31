@@ -18,6 +18,9 @@ export default class HolbertonCourse {
   }
 
   set length(length) {
+    if (Number.isNaN(length)) {
+      throw new TypeError('Length must be a string');
+    }
     this._length = Number(length);
   }
 
@@ -26,8 +29,17 @@ export default class HolbertonCourse {
   }
 
   set students(studentsN) {
-    if (typeof(studentN) === [1, 2]) {
-      this._students = Array(studentN);
+    if (Array.isArray(studentsN)) {
+	    for (const element in studentsN) {
+	      let type = typeof(element)
+	      if (typeof type !== 'string') {
+	        throw new TypeError('Student must be a string');
+	      }
+	    }
+      this._students = Array(studentsN);
+    }
+    else {
+      throw new TypeError('Student must be a string');
     }
   }
 }
