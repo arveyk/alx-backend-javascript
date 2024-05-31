@@ -11,11 +11,11 @@ export default class Pricing {
   }
 
   set amount(amount) {
-    if (Number.isNumber(amount) {
-      this._amount = amount;
+    if (Number.isNaN(amount) {
+      throw new TypeError('Amount must be a number');
     }
     else {
-      throw new TypeError('Amount must be a number');
+      this._amount = Number(amount);
     }
   }
 
