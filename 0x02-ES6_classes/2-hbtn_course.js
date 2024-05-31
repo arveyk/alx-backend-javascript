@@ -10,9 +10,7 @@ export default class HolbertonCourse {
   }
 
   set name(nameStr) {
-    if (typeof nameStr === 'string') {
-      this._name = String(nameStr);
-    }
+    this._name = String(nameStr);
   }
 
   get length() {
@@ -20,9 +18,7 @@ export default class HolbertonCourse {
   }
 
   set length(length) {
-    if (isNumber(length)) {
-      this._length = Number(length);
-    }
+    this._length = Number(length);
   }
 
   get students() {
