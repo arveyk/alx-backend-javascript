@@ -9,4 +9,4 @@ const queryAPI = function(endPoint) {
   });
 }
 
-export { weakMap, queryAPI };
+export default { weakMap, queryAPI };
