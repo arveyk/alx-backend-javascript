@@ -7,6 +7,6 @@ const queryAPI = function(endPoint) {
       throw new Error("Endpoint load is high");
     }
   });
-}
+};
 
-export default { weakMap, queryAPI };
+export { weakMap, queryAPI };
