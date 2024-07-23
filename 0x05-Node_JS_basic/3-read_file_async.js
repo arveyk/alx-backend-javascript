@@ -17,7 +17,7 @@ async function countStudents(path) {
     if (row.length === 0) {
        return;
     }
-    let count += 1;
+    count = count + 1;
     let columns = row.split(',');
     if (columns[3] === "CS") {
       csList.push(columns[0]);
