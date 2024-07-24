@@ -19,7 +19,7 @@ function countStudents(path) {
     }
     count += 1;
     const columns = row.split(',');
-    if (columns[3] === "CS") {
+    if (columns[3] === 'CS') {
       csList.push(columns[0]);
     }
     if (columns[3] === 'SWE') {
@@ -28,8 +28,7 @@ function countStudents(path) {
   });
   console.log(`Number of students: ${count - 1}`);
   console.log(`Number of students in CS: ${csList.length}. List: ${csList.join(', ')}`);
-  console.log('Number of students in SWE: '
-    + `${sweList.length}. List: ${sweList.join(', ')}`);
+  console.log(`Number of students in SWE: ${sweList.length}. List: ${sweList.join(', ')}`);
 }
 
 module.exports = countStudents;
