@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 async function countStudents(path) {
-  let data = ''
+  let data = '';
   try {
     data = await fs.promises.readFile(path, { encoding: 'utf-8' });
   } catch (err) {
