@@ -3,7 +3,7 @@ const fs = require('fs');
 async function countStudents(path) {
   let data = ''
   try {
-     data = await fs.promises.readFile(path, { encoding: 'utf-8' });
+    data = await fs.promises.readFile(path, { encoding: 'utf-8' });
   } catch (err) {
     throw new Error('Cannot load the database');
   }
@@ -15,20 +15,19 @@ async function countStudents(path) {
 
   rows.forEach((row) => {
     if (row.length === 0) {
-       return;
+      return;
     }
-    count = count + 1;
-    let columns = row.split(',');
+    count += 1;
+    const columns = row.split(',');
     if (columns[3] === 'CS') {
       csList.push(columns[0]);
     }
-    if (columns[3] === "SWE") {
+    if (columns[3] === 'SWE') {
       sweList.push(columns[0]);
     }
   });
-  console.log(`Number of students: ${count - 1}`)
-  console.log(`Number of students in CS: ${csList.length} List: ${csList.join(', ')}`);
+  console.log(`Number of students: ${count - 1}`);
+  console.log(`Number of students in CS: ${csList.length}. List: ${csList.join(', ')}`);
   console.log(`Number of students in SWE: ${sweList.length}. List: ${sweList.join(', ')}`);
-};
-
+}
 module.exports = countStudents;
