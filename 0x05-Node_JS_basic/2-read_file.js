@@ -26,7 +26,7 @@ function countStudents(path) {
       sweList.push(columns[0]);
     }
   });
-  console.log('Number of students:', count - 1);
+  console.log(`Number of students: ${count - 1}`);
   console.log(`Number of students in CS: ${csList.length}. List: ${csList.join(', ')}`);
   console.log('Number of students in SWE: '
     + `${sweList.length}. List: ${sweList.join(', ')}`);
