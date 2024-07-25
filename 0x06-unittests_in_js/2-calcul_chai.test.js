@@ -1,6 +1,5 @@
 const expect = require('chai').expect;
 const calculateNumber = require('./2-calcul_chai.js');
-
 describe('calculateNumber', function () {
   it('should return 3', function () {
     expect(calculateNumber('SUM', 1.2, 1.5)).to.equal(3);
