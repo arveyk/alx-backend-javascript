@@ -8,4 +8,3 @@ describe('calculateNumber function', function () {
     });
   });
 });
-
