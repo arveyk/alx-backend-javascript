@@ -59,7 +59,7 @@ describe('calculateNumber', function () {
 describe('calculateNumber', function () {
   it('should return Error', function () {
     assert.throws(() => {
-	    calculateNumber('DIVIDE', 90, 0.0)
+      calculateNumber('DIVIDE', 90, 0.0)
     }, Error, 'Infinity');
   });
 });
