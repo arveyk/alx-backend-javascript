@@ -7,7 +7,7 @@ function calculateNumber(type, a, b) {
     return num1 - num2;
   } else if (type === 'DIVIDE') {
     if (num2 === 0) {
-      throw new Error('Error');
+      return 'Error';
     }
     return num1 / num2;
   }

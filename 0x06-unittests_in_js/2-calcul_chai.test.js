@@ -64,3 +64,21 @@ describe('calculateNumber', function () {
     }
   });
 });
+describe('calculateNumber', function () {
+  it('should return Error', function () {
+    try {
+      expect(calculateNumber('DIVIDE', 90, 0.3)).to.throw(new Error('Error'));
+    } catch (err) {
+      expect(err).to.be.a('Error');
+    }
+  });
+});
+describe('calculateNumber', function () {
+  it('should return Error', function () {
+    try {
+      expect(calculateNumber('DIVIDE', 90, 0)).to.throw(new Error('Error'));
+    } catch (err) {
+      expect(err).to.be.a('Error');
+    }
+  });
+});
