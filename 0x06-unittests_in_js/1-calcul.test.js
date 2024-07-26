@@ -58,8 +58,6 @@ describe('calculateNumber', function () {
 });
 describe('calculateNumber', function () {
   it('should return Error', function () {
-    assert.throws(() => {
-      calculateNumber('DIVIDE', 90, 0.0)
-    }, Error, 'Infinity');
+    assert.equal(calculateNumber('DIVIDE', 90, 0.0), 'Error');
   });
 });
