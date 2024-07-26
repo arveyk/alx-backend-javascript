@@ -68,6 +68,5 @@ describe('calculateNumber', function () {
 describe('calculateNumber', function () {
   it('should return Error', function () {
       expect(calculateNumber('DIVIDE', 90, 0)).to.equal('Error');
-    }
   });
 });
