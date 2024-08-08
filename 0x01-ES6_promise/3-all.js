@@ -8,7 +8,6 @@ function handleProfileSignup() {
      const { body } = photoRes;
       console.log(`${body} ${fistName} ${lastName}`);
     }).catch((error) => {
-      console.log('Signup system offline'});
+      console.log('Signup system offline');
     });
-  }
 }
