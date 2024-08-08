@@ -1,6 +1,8 @@
-exports.handleResponseFromAPI = function(promise) {
-  promise.then(function(result) {
-    promise.resolve(result);
+function handleResponseFromAPI (promise) {
+  promise.then(function() {
     console.log('Got a response from the API');
-  }).catch(Error());
-};
+  }).catch((error) => {
+    console.error('Error', error)
+  });
+}
+module.exports = handleResponseFromAPI;
