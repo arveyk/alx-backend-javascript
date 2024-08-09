@@ -7,10 +7,7 @@ export default async function asyncUploadUser() {
     res1 = await uploadPhoto();
     res2 = await createUser();
   } catch (error) {
-    return {
-      photo: null,
-      user: null,
-    };
+    return new Error();
   }
   if (res1 === null || res2 === null) {
     const failRes = {
