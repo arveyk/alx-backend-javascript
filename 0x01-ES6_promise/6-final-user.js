@@ -5,7 +5,7 @@ function handleProfileSignup(firstName, lastName, fileName) {
   const promise0 = signUpUser(firstName, lastName);
   const promise1 = uploadPhoto(fileName);
   return Promise.allSettled([promise0, promise1]).then((results) => {
-    return results;
+    return [results];
   });
 }
 module.exports = handleProfileSignup;
