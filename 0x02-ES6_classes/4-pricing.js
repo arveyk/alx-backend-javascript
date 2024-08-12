@@ -14,22 +14,18 @@ export default class Pricing {
     if (Number.isNaN(amount)) {
       throw new TypeError('Amount must be a number');
     }
-    else {
-      this._amount = Number(amount);
-    }
+    this._amount = Number(amount);
   }
 
   get currency() {
-    return this._amount;
+    return this._currency;
   }
 
   set currency(currency) {
     if (currency instanceof Currency) {
       this._currency = currency;
     }
-    else {
-      throw new TypeError('currency must be of type Currency');
-    }
+    throw new TypeError('currency must be of type Currency');
   }
 
   displayFullPrice () {
