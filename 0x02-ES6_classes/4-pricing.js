@@ -28,8 +28,10 @@ export default class Pricing {
     throw new TypeError('currency must be of type Currency');
   }
 
-  displayFullPrice () {
-    return `${this.amount} ${this._currency._name} (${this._currency._code})`}
+  displayFullPrice() {
+    return `${this.amount} ${this._currency._name} (${this._currency._code})`;
+  }
+
   static convertPrice(amount, conversionRate) {
     return Number(amount * conversionRate);
   }
