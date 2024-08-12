@@ -10,7 +10,7 @@ export default class HolbertonCourse {
   }
 
   set name(nameStr) {
-    if (typeof(nameStr) !== 'string' ) {
+    if (typeof (nameStr) !== 'string') {
       throw new Error('TypeError: name must be a string');
     }
     this._name = String(nameStr);
@@ -33,15 +33,14 @@ export default class HolbertonCourse {
 
   set students(studentsN) {
     if (Array.isArray(studentsN)) {
-	    for (const element in studentsN) {
-	      let type = typeof(element)
-	      if (typeof type !== 'string') {
-	        throw new TypeError('Student must be a string');
-	      }
-	    }
+      for (let element = 0; element < studentsN.length; element += 1) {
+        const type = typeof studentsN[element];
+        if (typeof type !== 'string') {
+          throw new TypeError('Student must be a string');
+        }
+      }
       this._students = Array(studentsN);
-    }
-    else {
+    } else {
       throw new TypeError('Student must be a string');
     }
   }
