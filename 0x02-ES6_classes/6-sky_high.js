@@ -14,8 +14,8 @@ export default class SkyHighBuilding extends Building {
     this._floor = floorMeasure;
   }
 
-  valuationWarningMessage() {
-    super.valuationWarningMessage();
+  evaluationWarningMessage() {
+    super.evaluationWarningMessage();
     return `Evacuate slowly the ${this._floor} floors.`;
   }
 }
