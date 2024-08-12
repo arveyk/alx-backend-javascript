@@ -1,9 +1,7 @@
 export default class Building {
   constructor(sqft) {
     this._sqft = sqft;
-    if (!this.evaluationWarningMessage) {
-      throw new Error("Class extending Building must override evaluationWarningMessage");
-    }
+    this.evaluationWarningMessage();
   }
 
   get sqft() {
@@ -13,6 +11,15 @@ export default class Building {
   set sqft(sqftNum) {
     this._sqft = sqftNum;
   }
+
   evaluationWarningMessage() {
+    const proto = Object.getPrototypeOf(this);
+    const superProto = Building.prototype;
+    const missing = Object.getOwnPropertyNames(superProto)
+      .find(name => typeof superProto[name] === 'function' && !proto.hasOwnProperty(name)
+      );
+    if (missing) {
+      throw new Error('class Extending building must override evaluationWarningMessage');
+    }
   }
 }
