@@ -10,6 +10,9 @@ export default class HolbertonCourse {
   }
 
   set name(nameStr) {
+    if (typeof(nameStr) !== 'string' ) {
+      throw new Error('TypeError: name must be a string');
+    }
     this._name = String(nameStr);
   }
 
@@ -19,7 +22,7 @@ export default class HolbertonCourse {
 
   set length(length) {
     if (Number.isNaN(length)) {
-      throw new TypeError('Length must be a string');
+      throw new Error('TypeError: Length must be a string');
     }
     this._length = Number(length);
   }
