@@ -11,7 +11,7 @@ export default class Pricing {
   }
 
   set amount(amount) {
-    if (Number.isNaN(amount) {
+    if (Number.isNaN(amount)) {
       throw new TypeError('Amount must be a number');
     }
     else {
@@ -32,6 +32,8 @@ export default class Pricing {
     }
   }
 
+  displayFullPrice () {
+    return `${this.amount} ${this._currency._name} (${this._currency._code})`}
   static convertPrice(amount, conversionRate) {
     return Number(amount * conversionRate);
   }
