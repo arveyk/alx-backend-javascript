@@ -13,13 +13,11 @@ export default class Building {
   }
 
   evacuationWarningMessage() {
-    const proto = Object.getPrototypeOf(this);
+    // const proto = Object.getPrototypeOf(this);
     const superProto = Building.prototype;
-    const missing = Object.getOwnPropertyNames(superProto)
-      .find(name => typeof superProto[name] === 'function' && !proto.hasOwnProperty(name)
-      );
+    const missing = Object.getOwnPropertyNames(superProto).find((name) => typeof superProto[name] === 'function' && !Object.prototype.hasOwnProperty.call(this, name));
     if (missing) {
-      throw new Error('class Extending building must override evacuationWarningMessage');
+      throw new Error('Class extending Building must override evacuationWarningMessage');
     }
   }
 }
