@@ -39,7 +39,7 @@ export default class HolbertonCourse {
           throw new TypeError('Student must be an array of string');
         }
       }
-      this._students = Array(studentsN);
+      this._students = studentsN;
     } else {
       throw new TypeError('Student must be an Array');
     }
