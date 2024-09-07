@@ -5,8 +5,11 @@ const Utils = {
       case 'SUM':
         ret = Math.round(a) + Math.round(b);
         break;
-      case 'Divide':
-	ret = Math.round(a) + Math.round(b);
+      case 'DIVIDE':
+	ret = Math.round(a) / Math.round(b);
+        break;
+      case 'SUBTRACT':
+	ret = Math.round(a) - Math.round(b);
         break;
       default:
         ret = 'Operation not found';
