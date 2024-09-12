@@ -3,3 +3,5 @@ package-lock.json
 babel.config.js
 .eslintrc.js
 node_modules/
+
+gen.test.js
