@@ -4,8 +4,8 @@ export default class Car {
     this._motor = motor;
     this._color = color;
   }
-  
+
   cloneCar() {
-    return new Car();
+    return new this.constructor();
   }
 }
