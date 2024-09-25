@@ -1,9 +1,15 @@
+const readDatabase = require('../utils');
+
+
 class studentsController {
   static getAllStudents (requests, response) {
-    response.status(200);
-    response.send("This is the list of our students");
+    const studentList = readDatabase();
+    response.status(200).send("This is the list of our students": studentList);
   }
   static getAllStudentsByMajor (requests, response) {
-    response.status(200);
-    response.send("This is the list of our students");
+    const { SWE, CS } = request.params;
+    response.status(200).send("This is the list of our students");
   }
+}
+
+module.exports = studentsController;

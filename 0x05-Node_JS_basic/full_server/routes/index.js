@@ -1,13 +1,10 @@
-import express;
-const app = express();
-const port = 1245;
-app.get('/', (req, res) => {
-  app.use(__dirname, "App");
-});
-app.get('', (req, res) => {
-});
-app.listen(port, (err) => {
-  if (err) {
-    throw new Error();
-  }
-});
+const express = require('express');
+const router = express.Router();
+
+const AppController = require('./controllers/AppController');
+const StudentsController = require('./controller/StudentsController');
+
+router('/', AppController); 
+router('/students/:major', StudentsController);
+
+module.exports = router;
